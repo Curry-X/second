@@ -1,10 +1,13 @@
+ # coding: utf-8
+
+
 import functools
 
-def log(func=''):
+def log(nihao=''):
         def decorators(func): 
             @functools.wraps(func)
             def w(*args,**kw):
-                print('Curry_Xu 来也！！！%s'%(func.__name__))
+                print('Curry_Xu 来也！！！%s %s'%(func.__name__, nihao))
                 func(*args,**kw)
                 print("哦吼，拜拜~~~")
             return w 
